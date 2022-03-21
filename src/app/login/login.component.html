@@ -1,0 +1,20 @@
+    <div class="wrapper-login">
+        <div class="wrapper-login-box">
+            <div class="login-box">
+                <div class="login-up-box">
+                    <div class="inner-panel">
+                    </div>
+                </div>
+                <div class="login-down-box">
+                    <h3 class="login-text">Авторизуйтесь</h3>
+                        <select class = "form-control" name="loginSelect" [(ngModel)]="loginUser">
+                            <option *ngFor="let user of users" [value]="user?.login">
+                                {{user?.login}}
+                            </option>
+                        </select>
+                        <input class="form-control" type="password" required="" placeholder="Пароль" [(ngModel)]="password">
+                        <button class="enter" type="submit" (click)="loginLis()">Войти</button>
+                </div>
+            </div>
+        </div>	
+    </div>
