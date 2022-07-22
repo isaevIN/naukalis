@@ -1,0 +1,37 @@
+<div id="app">
+    <nav class="navbar fixed-top navbar-expand text-white" style="background-color: #3c8dbc;">
+      <a href="#" class="navbar-brand"><img src="assets/images/logo_navbar.png" width="30"/></a>
+      <ul class="navbar-nav mr-auto" routerLinkActive="active">
+        <li class="nav-item">
+          <a href="/myflights" *ngIf="isLoggedIn" class="nav-link" routerLink="myflights">Мои полеты </a>
+        </li>
+        <li class="nav-item" *ngIf="showAdminBoard">
+          <a href="/createflight" class="nav-link" routerLink="adminflight">Создать полеты</a>
+        </li>
+        <li class="nav-item" *ngIf="showAdminBoard">
+          <a href="/createcity" class="nav-link" routerLink="admincity">Создать город</a>
+        </li>
+        <li class="nav-item" *ngIf="showModeratorBoard">
+          <a href="/mod" class="nav-link" routerLink="mod">Модератор панель</a>
+        </li>
+      </ul>
+  
+      <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+        <li class="nav-item">
+          <a href="/login" class="nav-link text-white" routerLink="login">Авторизация</a>
+        </li>
+      </ul>
+  
+      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+        <li class="nav-item">
+          <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a>
+        </li>
+        <li class="nav-item">
+          <a href class="nav-link" (click)="logout()">Выход</a>
+        </li>
+      </ul>
+    </nav>
+  
+      <router-outlet></router-outlet>
+  </div>
+  

@@ -1,0 +1,59 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Разбор биоматериала</li>
+    </ol>
+</nav>
+<div class="container-fluid bg-white mb-5">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label for="findBarcode">Штрихкод</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend">
+                            <img src="assets/images/barcode.png" class="mx-auto" style="width: 20px;" alt="Адаптивные изображения">
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" id="findBarcode" aria-describedby="inputGroupPrepend" required>
+                </div>
+            </div>    
+            <div class="form-group col-md-2">
+                <label for="inputFilial">З/П</label>
+                <select id="inputFilial" class="form-control">
+                <option selected></option>
+                <option>Тя</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputNumber">Номер</label>
+                <input type="text" class="form-control" id="inputNumber">
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container-fluid bg-white pt-2">    
+    <table class="table table-hover bg-white">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Бланк</th>
+            <th scope="col">Число</th>
+            <th scope="col">Расходник</th>
+            <th scope="col">Биоматериал</th>
+            <th scope="col">Внешний код</th>
+            <th scope="col">Штрихкод</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">2</th>
+            <th>Вг</th>
+            <th>233</th>
+            <th>Красная пробирка</th>
+            <th>Соскоб U.R.C</th>
+            <th>31983</th>
+            <th>3215426782312345643</th>
+        </tr>
+        </tbody>
+      </table>
+</div>

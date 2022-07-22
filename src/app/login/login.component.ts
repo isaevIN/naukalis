@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginClass } from './login.service';
-import { User } from './user';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
-  providers:[LoginClass],
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public users: User[];
-  loginUser='';
-  password="";
+  form: any = {
+    username: null,
+    password: null
+  };
+  isLoggedIn = false;
+  isLoginFailed = false;
+  errorMessage = '';
+  roles: string[] = [];
 
   constructor(private loginClass: LoginClass){}
 
   ngOnInit(): void {
-   this.loginClass.getAllUser().subscribe((data:User[])=>{
-     this.users = data;
-   });
+
   }
 
-  loginLis(){
-    console.log(this.loginUser);
-    console.log(this.password);
+  onSubmit(){
+
   }
 }

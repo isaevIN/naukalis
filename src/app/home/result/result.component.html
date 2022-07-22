@@ -1,0 +1,55 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Результаты</li>
+    </ol>
+</nav>
+<div class="container-fluid bg-white">
+    <h3> Поиск </h3>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="inputFilial">З/П</label>
+                <select id="inputFilial" class="form-control">
+                    <option selected>Тм</option>
+                    <option>Тя</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputNumber">Номер</label>
+                <input type="text" class="form-control" id="inputNumber">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputDateStart">С</label>
+                <input type="date" class="form-control" id="inputDateStart">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputDateEnd">По</label>
+                <input type="date" class="form-control" id="inputDateEnd">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+                <label for="inputCompanyUnit">Разделы</label>
+                <select id="inputCompanyUnit" class="form-control">
+                <option selected>Все</option>
+                <option>ИФА</option>
+                <option>КДЛ</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputFilter">Фильтры</label>
+                <select id="inputFilter" class="form-control">
+                <option selected>Все</option>
+                <option>ИФА</option>
+                <option>КДЛ</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPersonalPhysical">Ф.И.О</label>
+            <input type="text" class="form-control" id="inputPersonalPhysical">
+        </div>
+        <button type="submit" class="btn btn-primary">Поиск</button>
+    </form>
+</div>
+
